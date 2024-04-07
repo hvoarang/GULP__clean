@@ -69,11 +69,11 @@ gulp.task('default', dev);
 const paths = {
   scripts: {
     src: './',
-    dest: './build',
+    dist: './build',
   },
 };
 async function buildHtml() {
-  gulp.src(['*.html']).pipe(gulp.dest(paths.scripts.dest));
+  gulp.src(['*.html']).pipe(gulp.dist(paths.scripts.dist));
 }
 
 exports.default = async function () {
