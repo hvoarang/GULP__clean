@@ -1,6 +1,7 @@
 // Получаем имя папки проекта
 import * as nodePath from 'path';
 const rootFolder = nodePath.basename(nodePath.resolve());
+import ghPages from 'gulp-gh-pages';
 
 const buildFolder = `./dist`; // Также можно использовать rootFolder
 const srcFolder = `./src`;
@@ -36,3 +37,9 @@ export const path = {
   rootFolder: rootFolder,
   ftp: `test`,
 };
+export function deploy() {
+  return gulp.src(`${buildFolder}/**/*`).pipe(ghPages());
+}
+
+// Задача по умолчанию
+export default deploy;

@@ -1,5 +1,7 @@
 // основной модуль
 import gulp from 'gulp';
+// const ghPages = require('gulp-gh-pages');
+import ghPages from 'gulp-gh-pages';
 
 // импорт путей
 import { path } from './gulp/config/path.js';
@@ -63,3 +65,14 @@ export { deployFTP };
 
 //выполнение сценария по умолчанию
 gulp.task('default', dev);
+
+// //deploy
+// async function buildHtml() {
+//   gulp.src(['*.html']).pipe(gulp.dest(path.scripts.dest));
+// }
+// exports.default = async function () {
+//   buildHtml();
+// };
+// gulp.task('deploy', function () {
+//   return gulp.src('./dist/**/*').pipe(ghPages);
+// });
