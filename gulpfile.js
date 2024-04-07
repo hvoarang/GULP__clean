@@ -54,7 +54,6 @@ const dev = gulp.series(reset, mainTasks, gulp.parallel(watcher, server));
 const build = gulp.series(reset, mainTasks);
 const deployZIP = gulp.series(reset, mainTasks, zip);
 const deployFTP = gulp.series(reset, mainTasks, ftp);
-const ghPages = require('gulp-gh-pages');
 
 // экспорт сценариев
 export { dev };
@@ -64,22 +63,3 @@ export { deployFTP };
 
 //выполнение сценария по умолчанию
 gulp.task('default', dev);
-
-//Deploy
-const paths = {
-  scripts: {
-    src: './',
-    dist: './build',
-  },
-};
-async function buildHtml() {
-  gulp.src(['*.html']).pipe(gulp.dist(paths.scripts.dist));
-}
-
-exports.default = async function () {
-  buildHtml();
-};
-
-gulp.task('deploy', function () {
-  return gulp.src('./build/**/*').pipe(ghPages());
-});
