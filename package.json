@@ -4,12 +4,15 @@
   "description": "",
   "main": "gulpfile.js",
   "type": "module",
+  "homepage": "https://Cristal1989.github.io/parsel_clean_build/",
   "scripts": {
     "dev": "gulp",
-    "build": "gulp build --build",
+    // "build": "gulp build --build",
     "zip": "gulp deployZIP --build",
     "deploy": "gulp deployFTP --build",
-    "svgSprive": "gulp svgSprive"
+    "svgSprive": "gulp svgSprive",
+    "start": "GULP src/*.html",
+    "build": "GULP build src/*.html --public-url /GULP_clean/"
   },
   "author": "Denys iElkin",
   "license": "ISC",
