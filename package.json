@@ -4,7 +4,7 @@
   "description": "",
   "main": "gulpfile.js",
   "type": "module",
-  "homepage": "https://Cristal1989.github.io/parsel_clean_build/",
+  "homepage": "https://Cristal1989.github.io/GULP_clean/",
   "scripts": {
     "dev": "gulp",
     "build": "gulp build src/*.html --public-url /GULP_clean/",
@@ -12,6 +12,10 @@
     "deploy": "gulp deployFTP --build",
     "svgSprive": "gulp svgSprive",
     "start": "GULP src/*.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/goitacademy/parcel-project-template.git"
   },
   "author": "Denys iElkin",
   "license": "ISC",
