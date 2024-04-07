@@ -4,7 +4,7 @@
   "description": "",
   "main": "gulpfile.js",
   "type": "module",
-  "homepage": "https://Cristal1989.github.io/GULP_clean/",
+  "homepage": "https://hvoarang.github.io/GULP_clean/",
   "scripts": {
     "dev": "gulp",
     "build": "gulp build src/*.html --public-url /GULP_clean/",
