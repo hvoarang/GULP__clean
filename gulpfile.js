@@ -1,6 +1,5 @@
 // основной модуль
 import gulp from 'gulp';
-import ghPages from 'gulp-gh-pages';
 
 // импорт путей
 import { path } from './gulp/config/path.js';
@@ -64,9 +63,3 @@ export { deployFTP };
 
 //выполнение сценария по умолчанию
 gulp.task('default', dev);
-
-export function deployGHPages() {
-  return gulp
-    .src('./dist/**/*') // путь к содержимому папки сборки
-    .pipe(ghPages()); // передача файлов в ghPages
-}
